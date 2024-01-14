@@ -120,7 +120,7 @@ data class Program(
      @Embedded     @AttributeOverrides(
     )
     var timeZoneOffset:  Duration? = null,
-    var programDescriptions:  ArrayList<${innerType}>? = null,
+    var programDescriptions:  ArrayList<String>? = null,
     var bindingEvents: Boolean? = null,
     var localPrice: Boolean? = null,
     @OneToMany(fetch = FetchType.EAGER) @JoinColumn(name = "payloadDescriptors") var payloadDescriptors:  Set<PayloadDescriptor>? = null,
@@ -199,7 +199,7 @@ data class Subscription(
 data class ValuesMap(
     @Id var valuesMapId: UUID? = null,
     var type: String? = null,
-    var values:  ArrayList<${innerType}>? = null
+    var values:  ArrayList<String>? = null
 )
 
 @Entity
