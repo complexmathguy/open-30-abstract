@@ -257,7 +257,7 @@ data class CreateProgramCommand(
     var country: String? = null,
     var principalSubdivision: String? = null,
     var timeZoneOffset:  Duration? = null,
-    var programDescriptions:  ArrayList<${innerType}>? = null,
+    var programDescriptions:  ArrayList<String>? = null,
     var bindingEvents: Boolean? = null,
     var localPrice: Boolean? = null,
     @Enumerated(EnumType.STRING) var objectType: ObjectType? = null
@@ -275,7 +275,7 @@ data class UpdateProgramCommand(
     var country: String? = null,
     var principalSubdivision: String? = null,
     var timeZoneOffset:  Duration? = null,
-    var programDescriptions:  ArrayList<${innerType}>? = null,
+    var programDescriptions:  ArrayList<String>? = null,
     var bindingEvents: Boolean? = null,
     var localPrice: Boolean? = null,
     var payloadDescriptors:  Set<PayloadDescriptor>? = null,
@@ -476,13 +476,13 @@ data class RemoveObjectOperationsFromSubscriptionCommand(@TargetAggregateIdentif
 data class CreateValuesMapCommand(
     @TargetAggregateIdentifier var valuesMapId: UUID? = null,
     var type: String? = null,
-    var values:  ArrayList<${innerType}>? = null
+    var values:  ArrayList<String>? = null
 )
 
 data class UpdateValuesMapCommand(
     @TargetAggregateIdentifier var valuesMapId: UUID? = null,
     var type: String? = null,
-    var values:  ArrayList<${innerType}>? = null
+    var values:  ArrayList<String>? = null
 )
 
 data class DeleteValuesMapCommand(@TargetAggregateIdentifier  var valuesMapId: UUID? = null)
